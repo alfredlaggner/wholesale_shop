@@ -29,7 +29,7 @@
             <ol class="breadcrumb">
                 <li><a href="{{ route('shop') }}">Shop</a></li>
                 @php
-                    $parentCategory = $product->category->parent;
+                    $parentCategory = 0 ;  //$product->category->parent;
                 @endphp
 
                 @if ($parentCategory)

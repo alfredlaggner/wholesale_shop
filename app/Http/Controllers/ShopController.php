@@ -38,19 +38,19 @@ class ShopController extends Controller {
 
         switch ($request->get('sort')) {
             case 'date':
-                $products = $products->orderBy('created_at', $order);
+                $products = $products->where('date_modified','>=','2017-12-20')->orderBy('created_at', $order);
                 break;
 
             case 'price':
-                $products = $products->orderBy('price', $order);
+                $products = $products->where('date_modified','>=','2017-12-20')->orderBy('price', $order);
                 break;
 
             case 'name':
-                $products = $products->orderBy('name', $order);
+                $products = $products->where('date_modified','>=','2017-12-20')->orderBy('name', $order);
                 break;
 
             default:
-                $products = $products->orderBy('order');
+                $products = $products->where('date_modified','>=','2017-12-20')->orderBy('order');
                 break;
         }
 

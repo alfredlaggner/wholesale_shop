@@ -16,8 +16,9 @@ class CustomHelper {
     public static function AWSimage($name, $thumbnail = false) {
         return env('AWS_URL') . '/' . env('AWS_BUCKET') . '/photos' . ($thumbnail ? '/thumbnails/' : '/') . $name;
     }
+
     public static function image($name, $thumbnail = false) {
-        return photos/' . ($thumbnail ? '/thumbnails/' : '/') . $name;
+        return 'http://www.illuminearts.com/cw4/images/orig/' . $name;
     }
 
     /**

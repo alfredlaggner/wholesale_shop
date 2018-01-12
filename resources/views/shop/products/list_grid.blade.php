@@ -17,7 +17,7 @@
                 <p class="title"><a href="{{ route('shop.product', [$product['uri'], $product['id']]) }}" title="View this item">{{ $product['name'] }}</a></p>
 
                 @if ($product->defaultPhoto() && $product->defaultPhoto()->count() > 0)
-                    <a href="{{ route('shop.product', [$product['uri'], $product['id']]) }}" class="thumbnail-link" title="View this item">
+                    <a href="{{ route('shop.product', [$product['uri'], $product['product_id']]) }}" class="thumbnail-link" title="View this item">
                         @if ($product['new'])
                             <div class="ribbon-wrapper">
                                 <div class="ribbon">NEW</div>

@@ -34,7 +34,7 @@ Route::group(['prefix' => 'shop', 'as' => 'shop'], function() {
     Route::get('p/{uri}-{product}.html', function($uri, $product) {
         return view('shop.products.show', compact('product'));
     })->where([
-        'uri' => '[0-9a-z\-]+',
+        'uri' => '[0-9a-zA-Z\-_]+',
         'product' => '[0-9]+'
     ])->name('.product');
 
